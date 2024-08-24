@@ -1,0 +1,28 @@
+[[redirects]]  
+from = "/*"  
+to = "/index.html"  
+status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+
+[[headers]]
+  for = "/*.prbm.gz"
+  [headers.values]
+    Content-Encoding = "gzip"
+[[headers]]
+  for = "/maps/overworld/textures.json.gz"
+  [headers.values]
+    Content-Encoding = "gzip"
+[[headers]]
+  for = "/maps/nether/textures.json.gz"
+  [headers.values]
+    Content-Encoding = "gzip"
+[[headers]]
+  for = "/maps/end/textures.json.gz"
+  [headers.values]
+    Content-Encoding = "gzip"
