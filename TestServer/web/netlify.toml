@@ -15,14 +15,6 @@ status = 200
   [headers.values]
     Content-Encoding = "gzip"
 [[headers]]
-  for = "/maps/overworld/textures.json.gz"
-  [headers.values]
-    Content-Encoding = "gzip"
-[[headers]]
-  for = "/maps/nether/textures.json.gz"
-  [headers.values]
-    Content-Encoding = "gzip"
-[[headers]]
-  for = "/maps/end/textures.json.gz"
+  for = "textures.json.gz"
   [headers.values]
     Content-Encoding = "gzip"
