@@ -1,0 +1,22 @@
+name: BlueMap - Render Test Server
+
+on:
+  workflow_dispatch: {}
+  push:
+    branches:
+      - main
+    paths:
+      - TestServer
+
+jobs:
+  render:
+    name: Render - Test Server
+    uses: EfinaServer/bluemap-action/.github/workflows/bluemap.yml@dev
+    with:
+      runner_name: "ubuntu-latest"
+      workdir_path: "TestServer"
+      maps_list: "world world_nether world_the_end"
+    secrets:
+      PTERODACTYL_API_URL: ${{ secrets.PTERODACTYL_API_URL }}
+      PTERODACTYL_API_TOKEN: ${{ secrets.PTERODACTYL_API_TOKEN }}
+      PTERODACTYL_ID: ${{ secrets.PTERODACTYL_TESTSERVER_ID }}
