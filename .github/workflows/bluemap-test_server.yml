@@ -16,7 +16,10 @@ jobs:
       runner_name: "ubuntu-latest"
       workdir_path: "TestServer"
       maps_list: "world world_nether world_the_end"
+      mc_version: "1.21.1"
     secrets:
       PTERODACTYL_API_URL: ${{ secrets.PTERODACTYL_API_URL }}
       PTERODACTYL_API_TOKEN: ${{ secrets.PTERODACTYL_API_TOKEN }}
       PTERODACTYL_ID: ${{ secrets.PTERODACTYL_TESTSERVER_ID }}
+      NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+      NETLIFY_SITE_ID: ${{ secrets.NETLIFY_TESTSERVER_SITE_ID }}
