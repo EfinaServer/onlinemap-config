@@ -4,17 +4,11 @@ to = "/index.html"
 status = 200
 
 [[headers]]
-  for = "/*"
+  for = "/*.json.gz"
   [headers.values]
-    X-Robots-Tag = "noindex"
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
+    Content-Encoding = "gzip"
 
 [[headers]]
   for = "/*.prbm.gz"
-  [headers.values]
-    Content-Encoding = "gzip"
-[[headers]]
-  for = "textures.json.gz"
   [headers.values]
     Content-Encoding = "gzip"
