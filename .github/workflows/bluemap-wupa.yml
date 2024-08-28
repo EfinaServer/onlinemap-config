@@ -2,6 +2,8 @@ name: BlueMap - Render WupaServer
 
 on:
   workflow_dispatch: {}
+  schedule:
+    - cron: "0 19 * * 6" # UTC / UTC+8 每周六的 3:00 
   push:
     branches:
       - main
